@@ -15,8 +15,21 @@ module GameRoom
 		end
 
 		def make_move
-			if player.make_move < room.exit
+			if check_exits
+				##what shall I do if eventually the user can move? 
+				##how can I connect two rooms or set up an action??
+				else
 
+		end
+
+		def check_exits
+			for (i=0;i<4;i++)
+				if player.make_move[i] < room.exit[i]
+					return false
+				else
+					return true
+				end
+			end
 		end
 	end
 
