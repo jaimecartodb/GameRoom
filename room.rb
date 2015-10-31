@@ -1,14 +1,16 @@
-module GameRoomm
+module GameRoom
 
-class Room
-	def initialize(type)
-		@type = type
+	class Room
+		def initialize(type, exits)
+			@type = type
+			@exits = exits		
+		end
+
+		def print_type
+			puts "You are in a #{@type}"
+		end
+
 	end
 
-	def print_type
-		puts "You are in a #{@type}"
-	end
+
 end
-
-rum = Room.new("floor")
-rum.print_type
